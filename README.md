@@ -11,6 +11,6 @@
 1. Run `webpack`
 1. Modify and `src/` and `test/` files 
 
-## Testing
+## Testing (NOT WORKING YET)
 1. Run `karma start`
 1. Modify and `src/` and `test/` files 
