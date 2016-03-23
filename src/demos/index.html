@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Angular App</title>
+</head>
+<body>
+
+
+<script type="text/javascript" src="../element-animate-polyfill.js"></script>
+<script>
+var element = document.body;
+if (element['animate']) {
+  alert('polyfill detected!');
+} else {
+  alert('polyfill missing :(');
+}
+</script>
+</body>
+</html>
