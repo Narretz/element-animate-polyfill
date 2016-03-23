@@ -14,3 +14,6 @@
 ## Testing (NOT WORKING YET)
 1. Run `karma start`
 1. Modify and `src/` and `test/` files 
+
+## Demos
+1. Run `npm run demo`
