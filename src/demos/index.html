@@ -10,9 +10,10 @@
 <script>
 var element = document.body;
 if (element['animate']) {
-  alert('polyfill detected!');
+  console.log('polyfill detected!');
+  console.log(element.animate({}, 2000));
 } else {
-  alert('polyfill missing :(');
+  console.log('polyfill missing :(');
 }
 </script>
 </body>

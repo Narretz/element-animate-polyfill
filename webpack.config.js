@@ -1,4 +1,4 @@
-module.exports = {  
+module.exports = {
   entry: './src/index.ts',
   output: {
     filename: 'dist/element-animate-polyfill.js'
