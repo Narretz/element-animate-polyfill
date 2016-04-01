@@ -1,12 +1,19 @@
 {
   "compilerOptions": {
-    "module": "amd",
+    "module": "commonjs",
     "target": "es5",
     "noImplicitAny": false,
-    "inlineSources": false
+    "outDir": "dist",
+    "rootDir": ".",
+    "inlineSources": false,
+    "sourceMap": true,
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
   },
   "files": [
     "src/index.ts",
+    "test/echo_spec.ts",
     "typings/main.d.ts"
   ]
 }

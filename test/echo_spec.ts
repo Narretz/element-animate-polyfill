@@ -1,7 +1,8 @@
-import {App} from '../src/index';
+import {ElementAnimatePolyfill} from '../src/index';
 
-describe('something', () => {
+describe('ElementAnimatePolyfill', () => {
   it('should be true', () => {
-    expect(App()).toEqual('hello');
+    var inst = new ElementAnimatePolyfill();
+    expect(inst.animate()).toEqual('true');
   });
 });

@@ -1,8 +1,10 @@
 module.exports = function(config) {
   config.set({
     browsers : ['Chrome'],
-
     frameworks: ['jasmine'],
+    singleRun: true,
+    autoWatch: false,
+
 
     files: [
       'test/*spec.ts'
@@ -11,11 +13,12 @@ module.exports = function(config) {
     plugins: [
       require('karma-chrome-launcher'),
       require('karma-webpack'),
+      require('karma-sourcemap-loader'),
       require('karma-jasmine')
     ],
 
     preprocessors: {
-      'test/*_spec.ts': ['webpack']
+      'test/*_spec.ts': ['webpack', 'sourcemap']
     },
 
     webpack: require('./webpack.config.js'),

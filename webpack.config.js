@@ -1,5 +1,5 @@
 module.exports = {  
-  entry: './src/index.ts',
+  devtool: 'source-map',
   output: {
     filename: 'dist/element-animate-polyfill.js'
   },
@@ -8,7 +8,7 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.ts$/, loader: 'ts-loader' }
+      {test: /\.ts/, loaders: ['ts-loader'], exclude: /node_modules/}
     ]
   }
 }

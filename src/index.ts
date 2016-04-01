@@ -1,5 +1,6 @@
 export class ElementAnimatePolyfill {
   animate() {
+    return 'true';
   }
 }
 
