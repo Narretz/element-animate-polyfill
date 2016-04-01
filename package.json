@@ -14,8 +14,14 @@
   },
   "scripts": {
     "compile": "webpack",
+    "compile:watch": "webpack --watch",
     "postinstall": "typings install",
     "copy-files": "rm -fr ./dist; mkdir ./dist; cp -R ./src/demos ./dist/demos",
-    "demo": "npm run copy-files; npm run compile; open http://localhost:8888/demos/; http-server -p 8888 ./dist;"
+    "demo": "npm run copy-files; npm run compile; open http://localhost:8888/demos/; http-server -p 8888 ./dist;",
+    "demo:watch": "node watch.js"
+  },
+  "devDependencies": {
+    "fs-extra": "^0.26.7",
+    "livereload": "^0.4.1"
   }
 }
