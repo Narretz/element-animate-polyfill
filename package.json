@@ -1,6 +1,7 @@
 {
   "title": "element-animate-polyfill",
   "dependencies": {
+    "clone": "^1.0.2",
     "gulp": "^3.9.1",
     "http-server": "^0.9.0",
     "jasmine-core": "^2.4.1",
@@ -19,6 +20,7 @@
     "copy-files": "rm -fr ./dist; mkdir ./dist; cp -R ./src/demos ./dist/demos",
     "demo": "npm run copy-files; npm run compile; open http://localhost:8888/demos/; http-server -p 8888 ./dist;",
     "test": "karma start",
-    "autotest": "karma start --auto-watch --no-single-run"
+    "autotest": "karma start --auto-watch --no-single-run",
+    "bundle": "webpack"
   }
 }

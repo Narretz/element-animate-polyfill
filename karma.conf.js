@@ -1,4 +1,12 @@
+var clone = require('clone');
+
+var webpackConfig = clone(require('./webpack.config.js'));
+
+// this would normally mess up karma
+delete webpackConfig.entry;
+
 module.exports = function(config) {
+
   config.set({
     browsers : ['Chrome'],
     frameworks: ['jasmine'],
@@ -21,7 +29,7 @@ module.exports = function(config) {
       'test/*_spec.ts': ['webpack', 'sourcemap']
     },
 
-    webpack: require('./webpack.config.js'),
+    webpack: webpackConfig,
 
     webpackMiddleware: {
       noInfo: true
