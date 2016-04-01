@@ -2,8 +2,19 @@
 <html>
 <head>
 <title>My Angular App</title>
+<style>
+  #animate {
+    height: 150px;
+    width: 150px;
+    background-color: red;
+  }
+</style>
 </head>
 <body>
+
+<button id="play">Animate</button>
+
+<div id="animate"></div>
 
 
 <script type="text/javascript" src="../element-animate-polyfill.js"></script>
@@ -11,10 +22,28 @@
 var element = document.body;
 if (element['animate']) {
   console.log('polyfill detected!');
-  console.log(element.animate({}, 2000));
 } else {
   console.log('polyfill missing :(');
 }
+
+var button = document.getElementById('play');
+
+button.addEventListener('click', function() {
+  var el = document.getElementById('animate');
+  var animator = el.animate([
+    {height: "150px"},
+    {height: "400px"}
+  ],{
+    duration: 1500
+  });
+
+  console.log(animator);
+});
+
+</script>
+<script>
+  document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+  ':35729/livereload.js?snipver=1"></' + 'script>')
 </script>
 </body>
 </html>
